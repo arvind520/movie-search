@@ -4,9 +4,10 @@ import { GlobalContext } from "../GlobalContext";
 const MovieList = () => {
   const getValueFromContext = useContext(GlobalContext);
   console.log(getValueFromContext.movieList);
-  const { movieList } = getValueFromContext;
+  const { movieList, loading } = getValueFromContext;
   return (
     <>
+      {loading && <div>Loading pls wait...</div>}
       {movieList && movieList.length > 0
         ? movieList.map((item) => (
             <div key={item.imdbID}>
