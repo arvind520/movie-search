@@ -13,7 +13,9 @@ const Search = () => {
           onChange={valueFromContext.handleOnChange}
           value={valueFromContext.searchParam}
         />
-        <button>Search</button>
+        <button disabled={valueFromContext.searchParam.length <= 2}>
+          Search
+        </button>
       </form>
     </>
   );
