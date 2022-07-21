@@ -18,6 +18,7 @@ const GlobalState = (props) => {
     const data = await res.json();
     if (data) {
       setMovieList(data.Search);
+      setSearchParam("");
       setLoading(false);
     }
   };
